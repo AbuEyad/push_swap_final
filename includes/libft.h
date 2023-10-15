@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 14:04:30 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/14 18:48:29 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/15 12:12:42 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int		get_next_line(int fd, char **line);
 int		ft_isalnum(int c);
 int		ft_isdigit(int c);
 char	**ft_split(char const *s, char c);
-char	**ft_split_cnt(char const *s, char c, int *cnt);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *s);
 char	*ft_strndup(const char *s, size_t n);

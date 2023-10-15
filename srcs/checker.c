@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:02:07 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/03 22:02:08 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/15 11:42:42 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int argc, char *argv[])
 		--argc;
 		++argv;
 	}
-	data.a = create_stack_with_arg(argc, argv);
+	data.a = create_stack(argc, argv);
 	instructions = read_instruction();
 	if (!exec_instruction(instructions, &data))
 		ft_putendl_fd("ERROR", 2);

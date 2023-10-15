@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/20 10:09:14 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/08/16 10:39:19 by habu-zua         ###   ########.fr       */
+/*   Created: 2023/07/20 11:26:23 by habu-zua          #+#    #+#             */
+/*   Updated: 2023/10/15 17:46:31 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	char	*new_str;
+	size_t	sublen;
 
-	i = 0;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	while (haystack[i] != '\0')
+	if (s == NULL)
+		return (NULL);
+	sublen = 0;
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	while (sublen < len && s[sublen + start])
+		sublen++;
+	new_str = (char *)malloc(sizeof(char) * (sublen + 1));
+	if (new_str != NULL)
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && (i + j) < len)
-		{
-			if (needle[j] == '\0')
-				return ((char *)&haystack[i]);
-			j++;
-		}
-		if (needle[j] == '\0')
-			return ((char *)&haystack[i]);
-		i++;
+		new_str[sublen] = '\0';
+		ft_strlcpy(new_str, s + start, sublen + 1);
 	}
-	return (0);
+	return (new_str);
 }

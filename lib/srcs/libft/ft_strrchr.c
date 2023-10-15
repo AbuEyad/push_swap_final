@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/20 11:26:23 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/08/14 15:19:32 by habu-zua         ###   ########.fr       */
+/*   Created: 2023/07/19 12:10:38 by habu-zua          #+#    #+#             */
+/*   Updated: 2023/10/15 12:09:21 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strrchr(const char *s, int c)
 {
-	char	*new_str;
-	size_t	sublen;
+	int			i;
 
-	if (s == NULL)
-		return (NULL);
-	sublen = 0;
-	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	while (sublen < len && s[sublen + start])
-		sublen++;
-	new_str = (char *)malloc(sizeof(char) * (sublen + 1));
-	if (new_str != NULL)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		new_str[sublen] = '\0';
-		ft_strlcpy(new_str, s + start, sublen + 1);
+		if (s[i] == (char)c)
+			return ((char *) &s[i]);
+		i--;
 	}
-	return (new_str);
+	return (0);
 }

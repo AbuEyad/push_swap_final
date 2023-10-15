@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/15 11:40:14 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/08/14 14:14:51 by habu-zua         ###   ########.fr       */
+/*   Created: 2023/07/20 11:34:26 by habu-zua          #+#    #+#             */
+/*   Updated: 2023/10/15 12:08:56 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str1)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str2;
+	char	*new_str;
+	int		i;
+	int		j;
 
-	str2 = (char *)malloc(ft_strlen(str1) + 1);
-	if (!str2)
+	new_str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!s1 || !s2 || !new_str)
 		return (0);
-	ft_memcpy(str2, str1, ft_strlen(str1) + 1);
-	return (str2);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		new_str[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (s2[j] != '\0')
+	{
+		new_str[i] = s2[j];
+		i++;
+		j++;
+	}
+	new_str[i] = '\0';
+	return (new_str);
 }

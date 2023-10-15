@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:00:10 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/14 19:24:02 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/15 11:21:19 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,13 @@ static int	get_pivoit_five(t_stack *stack)
 	free(array);
 	return (pivot);
 }
-#include <stdio.h>
+
 void	sort_five(t_push_swap *data)
 {
 	int		i;
 	int		pivot;
 
-	if (check_sort_n(data->a, ASC, 5))   //ASC == 1
+	if (check_sort_n(data->a, ASC, 5))
 		return ;
 	pivot = get_pivoit_five(data->a);
 	i = 0;

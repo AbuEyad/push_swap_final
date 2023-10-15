@@ -6,14 +6,14 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:15:18 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/07 14:02:33 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/15 13:05:43 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STACK_H
 # define STACK_H
 
-# include "libft.h"
+# include "../lib/inc/libft.h"
 
 # define VISUAL_SPEED	100000
 
@@ -37,7 +37,7 @@ typedef struct s_push_swap
 	int			visualizer;
 }				t_push_swap;
 
-t_stack	*create_stack_with_arg(int argc, char *argv[]);
+t_stack	*create_stack(int argc, char *argv[]);
 
 void	push(t_stack **from, t_stack **to);
 void	swap(t_stack *stack);

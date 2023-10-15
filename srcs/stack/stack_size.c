@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:01:48 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/03 22:01:49 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/15 14:12:00 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	stack_size(t_stack *lst)
 {
-	int		cnt;
+	int		count;
 
-	cnt = 0;
+	count = 0;
 	while (lst)
 	{
 		lst = lst->next;
-		++cnt;
+		++count;
 	}
-	return (cnt);
+	return (count);
 }

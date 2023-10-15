@@ -6,26 +6,25 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 21:17:52 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/09 21:28:41 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/15 11:23:51 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
 static int	get_min_four(t_stack *stack)
 {
-	t_stack *tmp;
-    int		min;
+	t_stack	*tmp;
+	int		min;
 
-    tmp = stack;
-    min = tmp->content;
-    while (tmp)
-    {
-        if (min > tmp->content)
-            min = tmp->content;
-        tmp = tmp->next;
-    }
+	tmp = stack;
+	min = tmp->content;
+	while (tmp)
+	{
+		if (min > tmp->content)
+			min = tmp->content;
+		tmp = tmp->next;
+	}
 	return (min);
 }
 
