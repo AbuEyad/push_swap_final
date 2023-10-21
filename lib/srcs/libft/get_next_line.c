@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 15:27:24 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 11:52:45 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 15:54:57 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,4 +116,3 @@ int	get_next_line(int fd, char **line)
 		return (-1);
 	return (ft_check_line(&store, ptr, line));
 }
-

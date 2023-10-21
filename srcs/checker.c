@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:02:07 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 14:16:40 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 15:57:20 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static void	check_sort(t_push_swap data)
 	else
 		ft_putendl_fd("KO", 1);
 }
+
 int	main(int argc, char *argv[])
 {
 	t_list		*operations;

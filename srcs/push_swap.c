@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:02:13 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 13:47:18 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 16:22:27 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	main(int argc, char *argv[])
 	data.a = create_stack(argc, argv);
 	data.b = NULL;
 	stack_sort(&data);
-	// print_stacks(data.a, data.b);
 	stack_clear(&data.a);
 	stack_clear(&data.b);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:15:18 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 12:53:46 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 16:25:04 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	swap(t_stack *stack);
 void	rotate(t_stack **stack);
 void	rrotate(t_stack **stack);
 
-void	print_stacks(t_stack *stack_a, t_stack *stack_b);
 int		check_stack_sorted(t_stack *stack_a, t_stack *stack_b);
 t_stack	*stack_new(int content);
 void	stack_add_front(t_stack **lst, t_stack *new_list);

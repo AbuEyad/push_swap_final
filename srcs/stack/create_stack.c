@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:00:47 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 14:05:55 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 15:57:40 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ static long	atoi_check(char *s, t_stack *result, char **split)
 		error_and_clear(result, split);
 	return (n);
 }
+
 t_stack	*create_stack(int argc, char *argv[])
 {
 	int		i[2];

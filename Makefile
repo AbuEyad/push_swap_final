@@ -6,7 +6,7 @@
 #    By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 22:02:23 by habu-zua          #+#    #+#              #
-#    Updated: 2023/10/21 12:00:02 by habu-zua         ###   ########.fr        #
+#    Updated: 2023/10/21 16:24:57 by habu-zua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ CH_DIR  = checker
 PS_DIR  = push_swap
 
 ST_SRCS = $(addprefix $(ST_DIR)/,check_stack_sorted.c create_stack.c \
-		  operator.c print_stacks.c push.c rotate.c  rrotate.c stack_add_back.c \
+		  operator.c push.c rotate.c  rrotate.c stack_add_back.c \
 		  stack_add_front.c stack_clear.c stack_last.c stack_new.c stack_size.c swap.c)
 CH_SRCS = $(addprefix $(CH_DIR)/,exec_operation.c read_operation.c)
 PS_SRCS = $(addprefix $(PS_DIR)/,check_sort_n.c get_pivot.c return_stack.c\
