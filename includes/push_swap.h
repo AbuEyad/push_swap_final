@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:14:15 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/15 13:05:14 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 12:45:32 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 # include "stack.h"
 # include <stdio.h>
 
-# define PUSH_CNT	0
-# define RA_CNT		1
-# define RB_CNT		2
+# define PUSH	0
+# define RA		1
+# define RB		2
 
-# define DESC		0
-# define ASC		1
+# define DESC	0
+# define ASC	1
 
-# define SMALL		0
-# define BIG		1
+# define SML	0
+# define BIG	1
 
 void	stack_sort(t_push_swap *data);
 void	get_pivot(int pivot[], t_stack *stack, int n);

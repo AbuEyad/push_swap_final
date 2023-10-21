@@ -6,13 +6,13 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:00:52 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/03 22:00:54 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 12:51:13 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void	operator(char *op, t_push_swap *data)
+void	operator(char *op, t_push_swap *data, int print)
 {
 	if (!ft_strcmp(op, "ra") || !ft_strcmp(op, "rr"))
 		rotate(&data->a);
@@ -30,12 +30,6 @@ void	operator(char *op, t_push_swap *data)
 		swap(data->a);
 	if (!ft_strcmp(op, "sb") || !ft_strcmp(op, "ss"))
 		swap(data->b);
-	if (data->visualizer == VISUAL)
-	{
-		system("clear");
-		print_stacks(data->a, data->b);
-		usleep(VISUAL_SPEED);
-	}
-	if (data->visualizer == OP)
+	if (print)
 		ft_putendl_fd(op, 1);
 }

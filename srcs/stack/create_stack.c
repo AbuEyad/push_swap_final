@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:00:47 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/15 17:44:54 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 14:05:55 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,25 +71,24 @@ static long	atoi_check(char *s, t_stack *result, char **split)
 		error_and_clear(result, split);
 	return (n);
 }
-
 t_stack	*create_stack(int argc, char *argv[])
 {
-	int		iv[2];
+	int		i[2];
 	char	**split;
 	t_stack	*result;
 	t_stack	*tmp;
 
 	result = NULL;
-	iv[0] = 0;
-	while (++iv[0] < argc)
+	i[0] = 0;
+	while (++i[0] < argc)
 	{
-		split = ft_split(argv[iv[0]], ' ');
+		split = ft_split(argv[i[0]], ' ');
 		if (split == NULL)
 			error_and_clear(result, split);
-		iv[1] = -1;
-		while (split[++iv[1]])
+		i[1] = -1;
+		while (split[++i[1]])
 		{
-			tmp = stack_new(atoi_check(split[iv[1]], result, split));
+			tmp = stack_new(atoi_check(split[i[1]], result, split));
 			if (tmp == NULL)
 				error_and_clear(result, split);
 			stack_add_back(&result, tmp);

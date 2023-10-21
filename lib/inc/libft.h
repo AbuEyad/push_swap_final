@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 14:04:30 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/15 12:12:58 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 11:39:32 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdarg.h>
 # include <limits.h>
+# include <stdio.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1

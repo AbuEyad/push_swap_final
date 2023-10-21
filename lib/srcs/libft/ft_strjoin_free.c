@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_sort.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 22:00:32 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 12:52:54 by habu-zua         ###   ########.fr       */
+/*   Created: 2023/10/21 11:29:28 by habu-zua          #+#    #+#             */
+/*   Updated: 2023/10/21 11:29:30 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	stack_sort(t_push_swap *data)
+char	*ft_strjoin_free(char const *s1, char const *s2, int check)
 {
-	int	size;
+	char	*result;
 
-	size = stack_size(data->a);
-	if (size == 5)
-		return (sort_five(data));
-	if (size == 4)
-		return (sort_four(data));
-	if (size == 3)
-		return (sort_three(data));
-	if (size == 2 && data->a->content > data->a->next->content)
-		return (operator("sa", data, 1));
-	return (sort_a(data, size));
+	result = ft_strjoin(s1, s2);
+	if (check & 1)
+		free((char *)s1);
+	if (check & 2)
+		free((char *)s2);
+	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:02:13 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/15 13:07:29 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 13:47:18 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	main(int argc, char *argv[])
 	if (argc < 2)
 		return (0);
 	ft_memset(&data, 0, sizeof(data));
-	data.visualizer = OP;
 	data.a = create_stack(argc, argv);
 	data.b = NULL;
 	stack_sort(&data);

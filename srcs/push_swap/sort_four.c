@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 21:17:52 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/15 11:23:51 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 13:41:41 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ void	sort_four(t_push_swap *data)
 	while (i++ < 4)
 	{
 		if (data->a->content == min)
-			operator("pb", data);
+			operator("pb", data, 1);
 		else
-			operator("ra", data);
+			operator("ra", data, 1);
 	}
 	if (!check_sort_n(data->a, ASC, 3))
 		sort_three(data);
-	operator("pa", data);
+	operator("pa", data, 1);
 }

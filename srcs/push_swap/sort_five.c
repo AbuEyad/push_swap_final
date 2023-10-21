@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:00:10 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/15 11:21:19 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 13:41:25 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,13 +68,13 @@ void	sort_five(t_push_swap *data)
 	while (i++ < 5)
 	{
 		if (data->a->content < pivot)
-			operator("pb", data);
+			operator("pb", data, 1);
 		else
-			operator("ra", data);
+			operator("ra", data, 1);
 	}
 	sort_three(data);
 	if (data->b->content < data->b->next->content)
-		operator("sb", data);
-	operator("pa", data);
-	operator("pa", data);
+		operator("sb", data, 1);
+	operator("pa", data, 1);
+	operator("pa", data, 1);
 }

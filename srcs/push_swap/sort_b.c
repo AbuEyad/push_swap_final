@@ -6,47 +6,47 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:00:04 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/14 19:23:45 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/21 13:41:01 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "stdio.h"
 
-static void	push_aaaaaaaaa(t_push_swap *data, int size)
+static void	push_a(t_push_swap *data, int size)
 {
 	while (size--)
-		operator("pa", data);
+		operator("pa", data, 1);
 }
 
 static void	call_next_sort(t_push_swap *data, int count[3])
 {
-	if (!check_sort_n(data->a, ASC, count[PUSH_CNT] - count[RA_CNT]))
-		sort_a(data, count[PUSH_CNT] - count[RA_CNT]);
-	return_stack(data, count[RA_CNT], count[RB_CNT]);
-	if (!check_sort_n(data->a, ASC, count[RA_CNT]))
-		sort_a(data, count[RA_CNT]);
-	if (!check_sort_n(data->b, DESC, count[RB_CNT]))
-		sort_b(data, count[RB_CNT]);
+	if (!check_sort_n(data->a, ASC, count[PUSH] - count[RA]))
+		sort_a(data, count[PUSH] - count[RA]);
+	return_stack(data, count[RA], count[RB]);
+	if (!check_sort_n(data->a, ASC, count[RA]))
+		sort_a(data, count[RA]);
+	if (!check_sort_n(data->b, DESC, count[RB]))
+		sort_b(data, count[RB]);
 	else
-		push_aaaaaaaaa(data, count[RB_CNT]);
+		push_a(data, count[RB]);
 }
 
 static void	move_stack(t_push_swap *data, int pivot[2], int count[3])
 {
-	if (data->b->content < pivot[SMALL])
+	if (data->b->content < pivot[SML])
 	{
-		++count[RB_CNT];
-		operator("rb", data);
+		++count[RB];
+		operator("rb", data, 1);
 	}
 	else
 	{
-		++count[PUSH_CNT];
-		operator("pa", data);
+		++count[PUSH];
+		operator("pa", data, 1);
 		if (data->a->content < pivot[BIG])
 		{
-			++count[RA_CNT];
-			operator("ra", data);
+			++count[RA];
+			operator("ra", data, 1);
 		}
 	}
 }
@@ -58,12 +58,12 @@ static void	switch_sort(t_push_swap *data, int size)
 	if (size == 2)
 	{
 		if (data->b->content < data->b->next->content)
-			operator("sb", data);
-		operator("pa", data);
-		return (operator("pa", data));
+			operator("sb", data, 1);
+		operator("pa", data, 1);
+		return (operator("pa", data, 1));
 	}
 	if (size == 1)
-		return (operator("pa", data));
+		return (operator("pa", data, 1));
 }
 
 void	sort_b(t_push_swap *data, int size)
@@ -71,10 +71,10 @@ void	sort_b(t_push_swap *data, int size)
 	int	count[3];
 	int	pivot[2];
 
+	if (check_sort_n(data->b, DESC, size))
+		return (push_a(data, size));
 	if (size <= 3)
 		return (switch_sort(data, size));
-	if (check_sort_n(data->b, DESC, size))
-		return (push_aaaaaaaaa(data, size));
 	ft_memset(&count, 0, sizeof(count));
 	get_pivot(pivot, data->b, size);
 	while (size-- > 0)
