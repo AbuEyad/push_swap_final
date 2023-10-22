@@ -6,12 +6,11 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:00:04 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 13:41:01 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/22 11:37:34 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "stdio.h"
 
 static void	push_a(t_push_swap *data, int size)
 {

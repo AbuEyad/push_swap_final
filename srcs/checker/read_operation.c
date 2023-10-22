@@ -6,11 +6,11 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 11:56:21 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 12:41:43 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/22 11:21:25 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/checker.h"
+#include "checker.h"
 
 static void	put_error_with_clear(t_list *result, char *operation)
 {

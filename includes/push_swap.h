@@ -6,16 +6,14 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:14:15 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 12:45:32 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/22 11:04:57 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../lib/inc/libft.h"
 # include "stack.h"
-# include <stdio.h>
 
 # define PUSH	0
 # define RA		1

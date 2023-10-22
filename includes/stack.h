@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:15:18 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 16:25:04 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/22 11:04:48 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define STACK_H
 
 # include "../lib/inc/libft.h"
-# include <stdio.h>
 
 # define FT_INT_MAX 	2147483647
 # define FT_INT_MIN 	-2147483648

@@ -6,11 +6,11 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 15:26:31 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 12:52:36 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/22 11:21:19 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/checker.h"
+#include "checker.h"
 
 static int	switch_operation(char *operation, t_push_swap *data)
 {

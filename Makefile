@@ -6,14 +6,14 @@
 #    By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 22:02:23 by habu-zua          #+#    #+#              #
-#    Updated: 2023/10/22 10:33:40 by habu-zua         ###   ########.fr        #
+#    Updated: 2023/10/22 11:32:31 by habu-zua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CHECKER   = checker
 PUSH_SWAP = push_swap
 LIB       = lib.a
-NAME      = $(PUSH_SWAP) $(CHECKER)
+NAME      = $(PUSH_SWAP)
 
 SRC_DIR   = srcs
 OBJ_DIR   = objs
@@ -48,8 +48,10 @@ $(PUSH_SWAP) :$(PS_OBJS) $(ST_OBJS) $(INCLUDES) $(LIB)
 	@$(CC) $(CFLAGS) $(ST_OBJS) $(PS_OBJS) -I$(INCLUDES) $(LIB_DIR)/$(LIB) srcs/push_swap.c -o $@
 	@echo "\033[32m$@ is ready\033[0m"
 
-$(CHECKER) : $(CH_OBJS) $(ST_OBJS) $(INCLUDES) 
-	@$(CC) $(CFLAGS) $(CH_OBJS) $(ST_OBJS) -I$(INCLUDES) $(LIB_DIR)/$(LIB) srcs/checker.c -o $@
+bonus : $(CHECKER)
+
+$(CHECKER) : $(CH_OBJS) $(ST_OBJS) $(INCLUDES) $(LIB)
+	@$(CC) $(CFLAGS) $(CH_OBJS) $(ST_OBJS) -I$(INCLUDES) srcs/checker.c $(LIB_DIR)/$(LIB)  -o $@
 	@echo "\033[32m$@ is ready\033[0m"
 
 $(PS_OBJS) : $(OBJ_DIR)/%.o:$(SRC_DIR)/%.c
@@ -77,7 +79,7 @@ clean :
 
 
 fclean : clean
-	@$(RM) $(RMFLAGS) $(NAME)
+	@$(RM) $(RMFLAGS) $(NAME) $(CHECKER)
 	@make -C $(LIB_DIR) fclean
 
 

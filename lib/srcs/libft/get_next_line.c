@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 15:27:24 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/21 15:54:57 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/22 11:00:28 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ static int	ft_check_line(t_gnl **store, t_gnl *gnl, char **line)
 int	get_next_line(int fd, char **line)
 {
 	static t_gnl	*store;
-	size_t			read_size;
+	long			read_size;
 	t_gnl			*ptr;
 	char			buf[BUFFER_SIZE + 1];
 
