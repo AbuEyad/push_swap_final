@@ -6,7 +6,7 @@
 /*   By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 21:59:42 by habu-zua          #+#    #+#             */
-/*   Updated: 2023/10/20 15:24:12 by habu-zua         ###   ########.fr       */
+/*   Updated: 2023/10/22 10:17:44 by habu-zua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	get_pivot(int pivot[], t_stack *stack, int n)
 		}
 		++iv[0];
 	}
-	pivot[SML] = array[(n * 2) / 3]; 
-	pivot[BIG] = array[n / 3]; 
+	pivot[SML] = array[(n * 2) / 3];
+	pivot[BIG] = array[n / 3];
 	free(array);
 }
