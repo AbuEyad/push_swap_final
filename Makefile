@@ -6,7 +6,7 @@
 #    By: habu-zua <habu-zua@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 22:02:23 by habu-zua          #+#    #+#              #
-#    Updated: 2023/10/21 16:24:57 by habu-zua         ###   ########.fr        #
+#    Updated: 2023/10/22 10:33:40 by habu-zua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,13 +24,15 @@ ST_DIR  = stack
 CH_DIR  = checker
 PS_DIR  = push_swap
 
-ST_SRCS = $(addprefix $(ST_DIR)/,check_stack_sorted.c create_stack.c \
-		  operator.c push.c rotate.c  rrotate.c stack_add_back.c \
-		  stack_add_front.c stack_clear.c stack_last.c stack_new.c stack_size.c swap.c)
-CH_SRCS = $(addprefix $(CH_DIR)/,exec_operation.c read_operation.c)
-PS_SRCS = $(addprefix $(PS_DIR)/,check_sort_n.c get_pivot.c return_stack.c\
-		  sort_a.c sort_b.c sort_five.c sort_three.c sort_three_a.c \
-		  sort_three_b.c stack_sort.c sort_four.c)
+ST_SRCS = stack/check_stack_sorted.c stack/create_stack.c stack/operator.c \
+		  stack/push.c stack/rotate.c  stack/rrotate.c stack/stack_add_back.c \
+		  stack/stack_add_front.c stack/stack_clear.c stack/stack_last.c\
+		  stack/stack_new.c stack/stack_size.c stack/swap.c
+CH_SRCS = checker/exec_operation.c checker/read_operation.c
+PS_SRCS = push_swap/check_sort_n.c push_swap/get_pivot.c push_swap/return_stack.c\
+		  push_swap/sort_a.c push_swap/sort_b.c push_swap/sort_five.c \
+		  push_swap/sort_three.c push_swap/sort_three_a.c push_swap/sort_three_b.c\
+		  push_swap/stack_sort.c push_swap/sort_four.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
